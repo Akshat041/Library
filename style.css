@@ -6,6 +6,7 @@
 
 html {
   font-family: sans-serif;
+  color: #333;
 }
 
 /* Header */
@@ -68,6 +69,16 @@ main {
   height: 200px;
   position: relative;
   border-radius: 20px;
+}
+
+.title {
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.author {
+  font-size: 18px;
+  color: #333;
 }
 
 .card-bottom {
