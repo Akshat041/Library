@@ -103,13 +103,13 @@ main {
   font-size: 16px;
 }
 
-.delete-book {
+.delete {
   font-size: 16px;
   background-color: rgba(253, 4, 4, 0.671);
 }
 
 .read,
-.delete-book {
+.delete {
   padding: 3px 5px;
 }
 
