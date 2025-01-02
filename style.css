@@ -40,13 +40,13 @@ header h1 {
 
 .add-book,
 .add-icon {
-  color: rgb(1, 172, 1);
+  color: rgba(0, 113, 206, 0.808);
   font-weight: 900;
 }
 
 .add-book:hover,
 .add-icon:hover {
-  background-color: rgba(0, 128, 0, 0.082);
+  background-color: rgba(175, 216, 255, 0.315);
 }
 
 /* main */
@@ -64,9 +64,10 @@ main {
 }
 
 .card {
+  width: 400px;
+  border: 2px solid rgb(0, 119, 255);
   padding: 25px;
-  background-color: rgba(177, 177, 177, 0.11);
-  height: 200px;
+  height: 250px;
   position: relative;
   border-radius: 20px;
 }
@@ -74,11 +75,14 @@ main {
 .title {
   font-size: 30px;
   margin-bottom: 16px;
+  color: rgba(0, 119, 255, 0.733);
+  font-weight: bold;
 }
 
 .author {
   font-size: 18px;
-  color: #333;
+  color: #333333a9;
+  font-weight: 700;
 }
 
 .card-bottom {
@@ -86,10 +90,11 @@ main {
   bottom: 20px;
   display: flex;
   gap: 46px;
+  align-items: center;
 }
 
 .pages {
-  color: rgba(80, 80, 80, 0.452);
+  color: rgba(80, 80, 80, 0.637);
   font-weight: 600;
 }
 
@@ -99,18 +104,23 @@ main {
 }
 
 .read {
-  background-color: rgba(0, 206, 0, 0.541);
+  background-color: rgba(0, 113, 206, 0.808);
   font-size: 16px;
 }
 
 .delete {
   font-size: 16px;
-  background-color: rgba(253, 4, 4, 0.671);
+  background-color: rgb(253, 4, 4);
 }
 
 .read,
 .delete {
-  padding: 3px 5px;
+  width: 100px;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 10px;
+  color: white;
+  font-weight: bold;
 }
 
 /* modal */
@@ -166,9 +176,19 @@ select {
 }
 
 .close {
-  background-color: rgb(1, 172, 1);
+  border: 3px solid #bebebe;
+  background-color: white;
+  border-radius: 10px;
+  color: #333;
 }
 
 .confirm {
-  background-color: rgb(1, 172, 1);
+  border-radius: 10px;
+  background-color: rgba(0, 113, 206, 0.808);
+  transition: all;
+}
+
+.confirm:hover {
+  transition: ease-out 0.1s;
+  background-color: rgba(0, 113, 206, 0.678);
 }

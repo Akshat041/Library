@@ -20,12 +20,9 @@ function Book(title, author, pages, isread) {
   this.author = author;
   this.pages = pages;
   this.isread = isread;
-  this.toggleReadStatus = function () {
-    this.isread = !this.isread;
-  };
 }
 
-// creates original object and store that object in myLibrary.
+// creates original object and store that object in myLibrary array.
 function addBookToLibrary(title, author, pages, read) {
   // original object
   const book = new Book(title, author, pages, read);
@@ -60,10 +57,13 @@ function displayBook(library) {
     readBtn.classList.add("read");
     readBtn.textContent = `${book.isread == "true" ? "Read" : "Not Read"}`;
 
-    // readBtn.addEventListener("click", () => {
-    //   book.toggleReadStatus();
-    //   readBtn.textContent = `${book.isread == "true" ? "Read" : "Not Read"}`;
-    // });
+    readBtn.addEventListener("click", () => {
+      if (readBtn.textContent == "Read") {
+        readBtn.textContent = "Not Read";
+      } else {
+        readBtn.textContent = "Read";
+      }
+    });
 
     const deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete");
@@ -78,7 +78,7 @@ function displayBook(library) {
 
     title.textContent = book.title;
     author.textContent = book.author;
-    pages.textContent = book.pages;
+    pages.textContent = `${book.pages} pages`;
 
     bottomBtns.appendChild(readBtn);
     bottomBtns.appendChild(deleteBtn);
